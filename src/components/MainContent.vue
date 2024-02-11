@@ -17,15 +17,10 @@
   </main>
 </template>
 
-<script lang="ts">
-export default {
-  data() {
-    return {
-      ingredientes: ['Tomate', 'Alface', 'Cenoura', 'Beterraba'],
-    };
-  },
-}
+<script lang="ts" setup>
+  import { ref } from 'vue';
 
+  const ingredientes = ref(['Tomate', 'Alface', 'Cenoura', 'Beterraba', 'Pepino']);
 </script>
 
 <style scoped>
