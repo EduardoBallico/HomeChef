@@ -11,7 +11,7 @@ export default {
   components: {
     Banner,
     MainContent,
-},
+  },
 };
 
 </script>

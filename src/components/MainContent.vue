@@ -5,14 +5,25 @@
         Sua lista:
       </span>
 
-      <ul class="ingredientes-sua-lista">
+      <ul 
+        v-if="ingredientes.length !== 0"
+        class="ingredientes-sua-lista"
+      >
         <li 
-          v-for="ingrediente in ingredientes" 
+          v-for="ingrediente in ingredientes"
+          :key="ingrediente" 
           class="ingrediente"
         >
           {{ ingrediente }}
         </li>
       </ul>
+      <p
+        v-else
+        class='paragrafo lista-vazia'
+      >
+        <img src="../assets/images/icones/lista-vazia.svg" alt="Lista vazia" />
+        Sua lista está vazia, selecione ingredientes para iniciar.
+      </p>
     </section>
   </main>
 </template>
@@ -20,7 +31,14 @@
 <script lang="ts" setup>
   import { ref } from 'vue';
 
-  const ingredientes = ref(['Tomate', 'Alface', 'Cenoura', 'Beterraba', 'Pepino']);
+  const ingredientes = ref([
+    'Tomate',
+    'Alface',
+    'Cenoura',
+    'Beterraba',
+    'Pepino',
+    'Cebola',
+  ]);
 </script>
 
 <style scoped>
